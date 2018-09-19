@@ -4,7 +4,7 @@
     padding: 2.5rem;
     text-align: center;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    box-shadow: $shadow-shallow-light;
     transition: all .3s;
 
     &__icon {
@@ -17,7 +17,7 @@
 
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);
-        box-shadow: 0 2.5rem 4rem rgba($color-black, .2);
+        box-shadow: $shadow-raised-light;
     }
 
 }

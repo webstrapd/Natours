@@ -10,10 +10,32 @@ $color-tertiary-light: #2998ff;
 $color-tertiary-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
+
+// Gradients
+$section-gradient: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8));
+
+$card-gradient-1: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+$card-gradient-2: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+$card-gradient-3: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+
+// Shadows
+$shadow-shallow-min: 0 .5rem 1rem rgba($color-black, .2);
+$shadow-raised-min: 0 1rem 2rem rgba($color-black, .2);
+
+$shadow-static-min: 0 1rem 2rem rgba($color-black, .15);
+
+$shadow-shallow-light: 0 1.5rem 4rem rgba($color-black, .15);
+$shadow-raised-light: 0 2.5rem 4rem rgba($color-black, .2);
+
+$shadow-shallow-dark: 0 1.5rem 4rem rgba($color-black, .4);
+$shadow-raised-dark: 0 2.5rem 4rem rgba($color-black, .5);
+
+$shadow-static-text: .5rem 1rem 2rem rgba($color-black, .2);
 
 // Font
 $default-font-size: 1.6rem;
