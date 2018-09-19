@@ -29,14 +29,6 @@ $card-gradient-3: linear-gradient(to right bottom, $color-tertiary-light, $color
 $box-gradient-clip: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%);
 
 // Shadows
-$shadow-static-text: .5rem 1rem 2rem rgba($color-black, .2);
-$shadow-static-link: .5rem 1rem 2rem rgba($color-black, .4);
-
-$shadow-static-min: 0 1rem 2rem rgba($color-black, .1);
-$shadow-static-light: 0 1rem 2rem rgba($color-black, .15);
-
-$shadow-static-box: 0 3rem 6rem rgba($color-black, .1);
-
 $shadow-shallow-min: 0 .5rem 1rem rgba($color-black, .2);
 $shadow-raised-min: 0 1rem 2rem rgba($color-black, .2);
 
@@ -48,6 +40,15 @@ $shadow-raised-med: 0 2.5rem 4rem rgba($color-black, .27);
 
 $shadow-shallow-dark: 0 1.5rem 4rem rgba($color-black, .4);
 $shadow-raised-dark: 0 2.5rem 4rem rgba($color-black, .5);
+
+$shadow-static-text: .5rem 1rem 2rem rgba($color-black, .2);
+$shadow-static-link: .5rem 1rem 2rem rgba($color-black, .4);
+
+$shadow-static-min: 0 1rem 2rem rgba($color-black, .1);
+$shadow-static-min-blur: 0 1rem 3rem rgba($color-black, .1);
+$shadow-static-light: 0 1rem 2rem rgba($color-black, .15);
+
+$shadow-static-box: 0 3rem 6rem rgba($color-black, .1);
 
 // Grid
 $grid-width: 114rem;
