@@ -49,14 +49,19 @@
         &:active {
             color: $color-primary-light;
             box-shadow: $shadow-static-link;
-            transform: rotate(5deg) scale(1.3);
+            // Jonas' original animation
+            // transform: rotate(5deg) scale(1.3);
+            transform: scale(1.2);
         }
 
 
         // Doesn't look as planned now that the text color has been changed.
         // Fix before next course:
         &--deprioritize {
-            opacity: .35;
+            &:link,
+            &:visited {
+                text-transform: none;
+            }
         }
     }
 
