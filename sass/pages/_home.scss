@@ -29,3 +29,23 @@
     position: relative;
     padding: 15rem 0;
 }
+
+.section-book {
+    padding: 15rem 0;
+    background-image: $section-gradient;
+}
+
+.book {
+    // "Solid color gradient" instead of clip-path for angled background color:
+    background-image: $box-gradient-clip, url('../img/nat-10.jpg');
+    background-size: cover;
+    border-radius: $border-radius-small;
+    box-shadow: $shadow-shallow-med;
+
+    height: 50rem;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}

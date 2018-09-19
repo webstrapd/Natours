@@ -23,6 +23,8 @@ $card-gradient-1: linear-gradient(to right bottom, $color-secondary-light, $colo
 $card-gradient-2: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 $card-gradient-3: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
 
+$box-gradient-clip: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%);
+
 // Shadows
 $shadow-static-text: .5rem 1rem 2rem rgba($color-black, .2);
 
@@ -36,14 +38,22 @@ $shadow-raised-min: 0 1rem 2rem rgba($color-black, .2);
 $shadow-shallow-light: 0 1.5rem 4rem rgba($color-black, .15);
 $shadow-raised-light: 0 2.5rem 4rem rgba($color-black, .2);
 
+$shadow-shallow-med: 0 1.5rem 4rem rgba($color-black, .2);
+$shadow-raised-med: 0 2.5rem 4rem rgba($color-black, .27);
+
 $shadow-shallow-dark: 0 1.5rem 4rem rgba($color-black, .4);
 $shadow-raised-dark: 0 2.5rem 4rem rgba($color-black, .5);
-
-// Font
-$default-font-size: 1.6rem;
-
 
 // Grid
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+// Border Radius
+$border-radius-min: .2rem;
+$border-radius-small: .3rem;
+$border-radius-button: 10rem;
+
+// Font
+$default-font-size: 1.6rem;
+
