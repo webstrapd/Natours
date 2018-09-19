@@ -12,7 +12,9 @@ $color-tertiary-dark: #5643fa;
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
-$color-grey-dark: #777;
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+
 $color-white: #fff;
 $color-black: #000;
 
@@ -28,7 +30,8 @@ $box-gradient-clip: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($col
 // Shadows
 $shadow-static-text: .5rem 1rem 2rem rgba($color-black, .2);
 
-$shadow-static-min: 0 1rem 2rem rgba($color-black, .15);
+$shadow-static-min: 0 1rem 2rem rgba($color-black, .1);
+$shadow-static-light: 0 1rem 2rem rgba($color-black, .15);
 
 $shadow-static-box: 0 3rem 6rem rgba($color-black, .1);
 
