@@ -556,6 +556,9 @@ body {
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 6rem; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
@@ -683,7 +686,7 @@ body {
     .navigation__button {
       top: 4rem;
       right: 4rem; } }
-  @media (max-width: 56.25em) {
+  @media (max-width: 37.5em) {
     .navigation__button {
       top: 3rem;
       right: 3rem; } }
@@ -711,11 +714,11 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100rem;
   z-index: 1500;
-  opacity: 0;
+  visibility: hidden;
   width: 0;
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  transition: all 0.8s cubic-bezier(0.48, -0.25, 0.265, 1.25); }
 
 .navigation__list {
   position: absolute;
@@ -753,8 +756,9 @@ body {
   transform: scale(80); }
 
 .navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  width: 100%; }
+  visibility: visible;
+  width: 100%;
+  left: 0; }
 
 .navigation__icon {
   position: relative;

@@ -21,7 +21,7 @@
             top: 4rem;
             right: 4rem;
         }
-        @include respond(tab-port) {
+        @include respond(phone) {
             top: 3rem;
             right: 3rem;
         }
@@ -57,11 +57,15 @@
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 0;
+        // Changed from 0 to -100 to keep animation start/end out of view
+        left: -100rem;
         z-index: 1500;
-        opacity: 0;
+        // opacity: 0;
+        // Changed to visibility instead to fix hidden link on left side
+        visibility: hidden;
         width: 0;
-        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        // Adjusted values after placing off screen to compensate for distance
+        transition: all .8s cubic-bezier(0.48, -0.25, 0.265, 1.25);
     }
 
     &__list {
@@ -116,8 +120,11 @@
     }
 
     &__checkbox:checked ~ &__nav {
-        opacity: 1;
+        // See __nav
+        // opacity: 1;
+        visibility: visible;
         width: 100%;
+        left: 0;
     }
 
     // ICON
