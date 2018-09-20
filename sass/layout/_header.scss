@@ -1,18 +1,24 @@
 .header {
 	height: 95vh;
-	background-image: $section-gradient, url(../img/hero.jpg);
+	background-image: $section-gradient, url(../img/hero-small.jpg);
 	background-size: cover;
 	background-position: top;
 	position: relative;
 
 	// Webkit variation is Jonas' suggested fix for older browsers:
-	webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	// Responsive hero image. Smaller image sufficient for cases except:
+	@media (min-resolution: 192dpi) and (min-width: 37.5em),
+		   (min-width: 125em) {
+		background-image: $section-gradient, url(../img/hero.jpg);	
+	}
 
 	// Fix angle no longer aligning with lower section skew in smaller screens
 	@include respond(phone) {
 			margin-bottom: $gutter-vertical-small;
-			webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 			clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 		}
 

@@ -83,9 +83,23 @@
 
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Nature photo 1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="Nature photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Nature photo 3" class="composition__photo composition__photo--p3">
+                            <img class="composition__photo composition__photo--p1"
+                                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                sizes="(max-width: 900px) 20vw, max-width(600px) 30vw, 300px"
+                                alt="Nature photo 1"
+                                src="img/nat-1-large.jpg">
+
+                            <img class="composition__photo composition__photo--p2"
+                                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                                sizes="(max-width: 900px) 20vw, max-width(600px) 30vw, 300px"
+                                alt="Nature photo 2"
+                                src="img/nat-2-large.jpg">
+
+                            <img class="composition__photo composition__photo--p3"
+                                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                                sizes="(max-width: 900px) 20vw, max-width(600px) 30vw, 300px"
+                                alt="Nature photo 1"
+                                src="img/nat-3-large.jpg">
                         </div>
                     </div>
                 </div>
@@ -244,7 +258,7 @@
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
-                        <source src="img.video.webm" type="video/webm">
+                         <source src="img.video.webm" type="video/webm">
                         Your browser is does not support this video.
                     </video>
                 </div>
@@ -258,7 +272,11 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img">
+                            <img class="story__img"
+                                srcset="img/nat-8-small.jpg 450w, img/nat-8-med.jpg 1050w, nat-8-large.jpg 2000w"
+                                sizes="(max-width: 56.25em) 34vw, max-width(37.5em) 50vw, 300px"
+                                alt="Tourgoer"
+                                src="img/nat-8.jpg">
                             <figcaption class="story__caption">Mary Smith</figcaption> 
                         </figure>
 
@@ -272,7 +290,12 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img">
+                            <img src="img/nat-9.jpg" alt="Tourgoer" class="story__img">
+                            <img class="story__img"
+                                srcset="img/nat-9-small.jpg 450w, img/nat-9-med.jpg 1050w, nat-9-large.jpg 2000w"
+                                sizes="(max-width: 56.25em) 34vw, max-width(37.5em) 50vw, 300px"
+                                alt="Tourgoer"
+                                src="img/nat-9.jpg">
                             <figcaption class="story__caption">Jack Wilson</figcaption>
                         </figure>
                 
@@ -342,7 +365,11 @@
 
         <footer class="footer" id="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                            media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" sec="img/logo-green-2x.png">
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -377,8 +404,16 @@
         <div class="popup" id="popup">
             <div class="popup__content">
                 <div class="popup__left">
-                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__image">
-                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__image">
+                    <img class="popup__image"
+                                srcset="img/nat-8-small.jpg 450w, img/nat-8-med.jpg 1050w, nat-8-large.jpg 2000w"
+                                sizes="(max-width: 56.25em) 34vw, max-width(37.5em) 50vw, 350px"
+                                alt="Tour photo"
+                                src="img/nat-8.jpg">
+                    <img class="popup__image"
+                                srcset="img/nat-9-small.jpg 450w, img/nat-9-med.jpg 1050w, nat-9-large.jpg 2000w"
+                                sizes="(max-width: 56.25em) 34vw, max-width(37.5em) 50vw, 350px"
+                                alt="Tour photo"
+                                src="img/nat-9.jpg">
                 </div>
                 <div class="popup__right">
                     <a href="#section-tours" class="popup__close">&times;</a>

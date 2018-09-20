@@ -10,7 +10,7 @@
 
 .section-features {
     padding: 20rem 0;
-    background-image: $section-gradient, url(../img/nat-4.jpg);
+    background-image: $section-gradient, url(../img/nat-4-small.jpg);
     background-size: cover;
 
     // Fix background open spaces after skew:
@@ -29,6 +29,11 @@
     @include respond(tab-port) {
         padding: 10rem 0;
     }
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+		           (min-width: 125em) {
+		        background-image: $section-gradient, url(../img/nat-4.jpg);	
+	        }
 }
 
 .section-tours {
@@ -60,19 +65,28 @@
 
 .book {
     // "Solid color gradient" instead of clip-path for angled background color:
-    background-image: $box-gradient-clip, url('../img/nat-10.jpg');
+    background-image: $box-gradient-clip, url('../img/nat-10-small.jpg');
     background-size: cover;
     border-radius: $border-radius-small;
     box-shadow: $shadow-shallow-med;
 
     @include respond(tab-land) {
-        background-image: $box-gradient-clip-mobile, url('../img/nat-10.jpg')
+        background-image: $box-gradient-clip-mobile, url('../img/nat-10-small.jpg');
     }
 
     // No more clip gradient for 900px or smaller
     @include respond(tab-port) {
-        background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10.jpg')
+        background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10-small.jpg')
     }
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+               background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10.jpg')
+    }
+
+    @media (min-width: 125em) {
+        background-image: $box-gradient-clip, url('../img/nat-10.jpg');
+    }
+            
 
     &__form {
         width: 50%;

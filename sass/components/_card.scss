@@ -62,15 +62,30 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &--1 {
-            background-image: $card-gradient-1, url(../img/nat-5.jpg);
+            background-image: $card-gradient-1, url(../img/nat-5-small.jpg);
+            
+            @media (min-resolution: 192dpi) and (min-width: 37.5em),
+		           (min-width: 125em) {
+		        background-image: $card-gradient-1, url(../img/nat-5.jpg);	
+	        }
         }
         
         &--2 {
-            background-image: $card-gradient-2, url(../img/nat-6.jpg);
+            background-image: $card-gradient-2, url(../img/nat-6-small.jpg);
+
+            @media (min-resolution: 192dpi) and (min-width: 37.5em),
+		           (min-width: 125em) {
+		        background-image: $card-gradient-2, url(../img/nat-6.jpg);	
+	        }
         }
         
         &--3 {
-            background-image: $card-gradient-3, url(../img/nat-7.jpg);
+            background-image: $card-gradient-3, url(../img/nat-7-small.jpg);
+
+            @media (min-resolution: 192dpi) and (min-width: 37.5em),
+		           (min-width: 125em) {
+		        background-image: $card-gradient-3, url(../img/nat-7.jpg);	
+	        }
         }
     }
 
