@@ -2,17 +2,39 @@
 	max-width: $grid-width;
 	margin: 0 auto;
 
+	// Prevent new 100% width colums from becoming too wide
+	@include respond(tab-port) {
+			max-width: 50rem;
+			padding: 0 3rem;
+		}
+
 	&:not(:last-child) {
 		margin-bottom: $gutter-vertical;
+
+		// Reduce vertical gutters for small screens
+		@include respond(tab-port) {
+			margin-bottom: $gutter-vertical-small;
+		}
 	}
 
-	@include clearfix
+	@include clearfix;
 
 	[class^="col-"] {
 		float: left;
 
 		&:not(:last-child) {
 			margin-right: $gutter-horizontal;
+
+			// Gutter needed vertically instead after their width is 100%
+			@include respond(tab-port) {
+				margin-right: 0;
+				margin-bottom: $gutter-vertical-small;
+			}
+		}
+
+		// Turn all columns into rows for screens smaller than 900px
+		@include respond(tab-port) {
+			width: 100% !important;
 		}
 
 	}

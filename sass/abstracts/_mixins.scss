@@ -23,7 +23,8 @@
 // And rems do not always translate well to media queries so we're using ems
 // Using ems instead of px to ensure it applies if user changes base font size
 // Not making breakpoints exclusive so that we can apply multiple to keep code DRY
-// >1800 ? apply big : <1200 ? apply tab-land : <900 ? apply additional changes etc. 
+// >1800 ? apply big : <1200 ? apply tab-land : <900 ? apply additional changes etc.
+// Write order: base + typography > general layout + grid > components 
 
 @mixin respond($breakpoint) {
 	@if $breakpoint == phone {

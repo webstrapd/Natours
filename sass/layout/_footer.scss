@@ -4,6 +4,10 @@
     font-size: 1.4rem;
     color: $color-grey-light-1;
 
+    @include respond(tab-port) {
+            padding: 8rem 0;
+        }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
@@ -19,6 +23,12 @@
         border-top: 1px solid $color-grey-dark-1;
         padding-top: 2rem;
         display: inline-block;
+
+        // No longer side by side with __copyright
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -70,6 +80,12 @@
         border-top: 1px solid $color-grey-dark-1;
         padding-top: 2rem;
         float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
     
 }

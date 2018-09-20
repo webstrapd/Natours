@@ -25,4 +25,10 @@ html {
 
 body {
 	box-sizing: border-box;
+	padding: 3rem;
+
+	// No more white padding around page after 900px screen width 
+	@include respond(tab-port) {
+		padding: 0;
+	}
 }
