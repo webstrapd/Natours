@@ -8,13 +8,16 @@
     padding: 20rem 0;
     background-image: $section-gradient, url(../img/nat-4.jpg);
     background-size: cover;
+
+    // Fix background open spaces after skew:
     margin-top: -10rem;
+    margin-bottom: -10rem;
 
     // This skew could have been accomplished with clip-path like in the header,
     // but we're trying out a different method:
     transform: skewY(-7deg);
     
-    //This compensates for the skew with all child elements:
+    // This compensates for the skew with all child elements:
     & > * {
         transform: skewY(7deg);
     }

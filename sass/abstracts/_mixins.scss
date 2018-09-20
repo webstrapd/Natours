@@ -12,3 +12,30 @@
     left: 50%;
     transform: translate(-50%, -50%)
 }
+
+// Media Query Manager
+// 0-600: 		phone
+// 600-900: 	tab-port
+// 900 -1200: 	tab-land
+// 1200 - 1800 --Regular styles
+// 1800+		big-desktop
+// Base rem setting of 62.5% for 10px that we did does not apply to media queries apparently
+// And rems do not always translate well to media queries so we're using ems
+// Using ems instead of px to ensure it applies if user changes base font size
+// Not making breakpoints exclusive so that we can apply multiple to keep code DRY
+// >1800 ? apply big : <1200 ? apply tab-land : <900 ? apply additional changes etc. 
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) { @content }; 	//600px
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) { @content }; 	//900px
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) { @content };	//1200px
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) { @content }; 	//1800px
+	}	
+}
