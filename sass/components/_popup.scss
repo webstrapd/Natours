@@ -1,0 +1,58 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 9001;
+    opacity: 0;
+    visibility: hidden;
+ 
+    &__content {
+        @include absolute-center;
+        width: 75%;
+        background-color: $color-white;
+        border-radius: $border-radius-small;
+        box-shadow: $shadow-shallow-med;
+        display: table;
+        overflow: hidden;
+    }
+
+    // Display table instead of float to ensure both __left and __width have same height
+    &__left {
+        display: table-cell;
+        width: 33.33333334%;       
+    }
+
+    &__right {
+        display: table-cell;
+        width: 66.66666666%;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__image {
+        margin: 1px 0px 0px 1px;
+        display: block;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        // New properties to automatically format columns
+        column-count: 2;
+        column-gap: 5rem;
+        column-rule: 1px solid $color-grey-light-2;
+
+        // Chrome support appears limited to mobile at the moment
+        hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+    }
+    
+    
+}
