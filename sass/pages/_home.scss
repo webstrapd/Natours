@@ -65,10 +65,25 @@
     border-radius: $border-radius-small;
     box-shadow: $shadow-shallow-med;
 
-    height: 50rem;
+    @include respond(tab-land) {
+        background-image: $box-gradient-clip-mobile, url('../img/nat-10.jpg')
+    }
+
+    // No more clip gradient for 900px or smaller
+    @include respond(tab-port) {
+        background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10.jpg')
+    }
 
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include respond(tab-land) {
+            width: 65%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
     }
 }

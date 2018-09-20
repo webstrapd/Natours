@@ -54,10 +54,11 @@
             outline: 1.5rem solid $color-primary;
             transform: scale(1.05) translateY(-.5rem);
             box-shadow: $shadow-raised-dark;
-            z-index: 20;
+            z-index: 200;
 
             @include respond(tab-port) {
-            box-shadow: $shadow-raised-med;
+                box-shadow: $shadow-raised-med;
+                transform: scale(1.45) translateY(-.5rem);
             }
         }
 
@@ -65,5 +66,9 @@
 
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
+
+        @include respond(tab-port) {
+            transform: scale(1);
+        }
     }
 }

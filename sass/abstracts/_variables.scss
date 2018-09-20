@@ -27,6 +27,7 @@ $card-gradient-2: linear-gradient(to right bottom, $color-primary-light, $color-
 $card-gradient-3: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
 
 $box-gradient-clip: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%);
+$box-gradient-clip-mobile: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 65%, transparent 65%);
 
 // Shadows
 $shadow-shallow-min: 0 .5rem 1rem rgba($color-black, .2);

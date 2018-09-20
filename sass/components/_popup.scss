@@ -9,6 +9,10 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+
+    @include respond(tab-land) {
+        text-align: center;
+    }
  
     &__content {
         @include absolute-center;
@@ -29,7 +33,12 @@
     // Display table instead of float to ensure both __left and __width have same height
     &__left {
         display: table-cell;
-        width: 33.33333334%;       
+        width: 33.33333334%;
+
+        @include respond(tab-land) {
+           display: none;
+    }
+
     }
 
     &__right {
@@ -45,6 +54,7 @@
 
         // Personal preference
         margin: 1px 0px 0px 1px;
+
     }
 
     &__text {
