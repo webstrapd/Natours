@@ -13,12 +13,13 @@
     transform: translate(-50%, -50%)
 }
 
-// Media Query Manager
-// 0-600: 		phone
-// 600-900: 	tab-port
-// 900 -1200: 	tab-land
-// 1200 - 1800 --Regular styles
-// 1800+		big-desktop
+// Media Query Manager (inputs)
+// 0-600: 		(phone)
+// 600-900: 	(tab-port)
+// 900 -1200: 	(tab-land)
+// 1200 - 1800 --Regular styles--
+// 1800+		(big-desktop)
+// No hover		(no-hover)
 // Base rem setting of 62.5% for 10px that we did does not apply to media queries apparently
 // And rems do not always translate well to media queries so we're using ems
 // Using ems instead of px to ensure it applies if user changes base font size
@@ -38,5 +39,8 @@
 	}
 	@if $breakpoint == big-desktop {
 		@media (min-width: 112.5em) { @content }; 	//1800px
-	}	
+	}
+	@if $breakpoint == no-hover {
+		@media (hover: none) { @content }; //No hover capability
+	}
 }
