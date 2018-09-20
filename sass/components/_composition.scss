@@ -10,19 +10,44 @@
         transition: all .2s;
         outline-offset: 2rem;
 
+        // Change photo composition layout when it turns into a row
+        @include respond(tab-port) {
+            float: left;
+            position: relative;
+            width: 33.33333333333%;
+            box-shadow: $shadow-shallow-med;
+        }
+
         &--p1 {
             left: 0;
             top: -2rem;
+            
+            @include respond(tab-port) {
+                top: 0;
+                transform: scale(1.2);
+            }
         }
 
         &--p2 {
             right: 0;
             top: 2rem;
+
+            @include respond(tab-port) {
+                top: -1rem;  
+                transform: scale(1.3);
+                z-index: 100;
+            }
         }
 
         &--p3 {
             left: 20%;
             top: 10rem;
+
+            @include respond(tab-port) {
+                top: 1rem;
+                left: 0;
+                transform: scale(1.1);
+            }
         }
 
         &:hover {
@@ -30,6 +55,10 @@
             transform: scale(1.05) translateY(-.5rem);
             box-shadow: $shadow-raised-dark;
             z-index: 20;
+
+            @include respond(tab-port) {
+            box-shadow: $shadow-raised-med;
+            }
         }
 
     }
