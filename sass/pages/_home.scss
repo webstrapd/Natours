@@ -30,7 +30,7 @@
         padding: 10rem 0;
     }
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
            (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
 		           (min-width: 125em) {
 		        background-image: $section-gradient, url(../img/nat-4.jpg);	
@@ -80,12 +80,12 @@
         background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10-small.jpg')
     }
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
            (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
                background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10.jpg')
     }
 
-    @media (min-width: 125em) {
+    @media only screen and (min-width: 125em) {
         background-image: $box-gradient-clip, url('../img/nat-10.jpg');
     }
             

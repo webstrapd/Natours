@@ -14,7 +14,7 @@
 
 	// Responsive hero image. Smaller image sufficient for cases except these.
 	// pixel ratio instead of resolution for safari
-	@media (min-resolution: 192dpi) and (min-width: 37.5em),
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
 		   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
 		   (min-width: 125em) {
 		background-image: $section-gradient, url(../img/hero.jpg);	
