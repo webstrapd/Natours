@@ -1,16 +1,21 @@
 .header {
-	height: 95vh;
+	height: 85vh;
 	background-image: $section-gradient, url(../img/hero-small.jpg);
 	background-size: cover;
 	background-position: top;
 	position: relative;
 
-	// Webkit variation is Jonas' suggested fix for older browsers:
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	// Feature query for graceful degradation
+	@supports (clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		height: 95vh;
+	}
 
-	// Responsive hero image. Smaller image sufficient for cases except:
+	// Responsive hero image. Smaller image sufficient for cases except these.
+	// pixel ratio instead of resolution for safari
 	@media (min-resolution: 192dpi) and (min-width: 37.5em),
+		   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
 		   (min-width: 125em) {
 		background-image: $section-gradient, url(../img/hero.jpg);	
 	}

@@ -13,6 +13,9 @@
         top: 0;
         left: 0;
         width: 100%;
+
+        // Safari appears to require prefix for versions prior to 12
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
 
         border-radius: $border-radius-small;
@@ -65,6 +68,7 @@
             background-image: $card-gradient-1, url(../img/nat-5-small.jpg);
             
             @media (min-resolution: 192dpi) and (min-width: 37.5em),
+                   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
 		           (min-width: 125em) {
 		        background-image: $card-gradient-1, url(../img/nat-5.jpg);	
 	        }
@@ -74,6 +78,7 @@
             background-image: $card-gradient-2, url(../img/nat-6-small.jpg);
 
             @media (min-resolution: 192dpi) and (min-width: 37.5em),
+                   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
 		           (min-width: 125em) {
 		        background-image: $card-gradient-2, url(../img/nat-6.jpg);	
 	        }
@@ -83,6 +88,7 @@
             background-image: $card-gradient-3, url(../img/nat-7-small.jpg);
 
             @media (min-resolution: 192dpi) and (min-width: 37.5em),
+                   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
 		           (min-width: 125em) {
 		        background-image: $card-gradient-3, url(../img/nat-7.jpg);	
 	        }

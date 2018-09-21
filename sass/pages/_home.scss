@@ -31,6 +31,7 @@
     }
 
     @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
 		           (min-width: 125em) {
 		        background-image: $section-gradient, url(../img/nat-4.jpg);	
 	        }
@@ -79,7 +80,8 @@
         background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10-small.jpg')
     }
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
                background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('../img/nat-10.jpg')
     }
 
